@@ -23,6 +23,18 @@ decrement = () => {
   })
 }
 
+singleCount = () => {
+  this.setState ({
+    count: this.state.count * 1,
+  })
+}
+
+doubleCount = () => {
+  this.setState ({
+    count: this.state.count * 2,
+  })
+}
+
   render () {
     return (
       <div className = "container">
@@ -32,11 +44,14 @@ decrement = () => {
       <button type="button">Clear</button>
       <button type="button" onClick={this.increment}>Increment</button>
       <button type="button" onClick={this.decrement}>Decrement</button>
-      <button type="button">Single Count</button>
+      <button type="button" id="singlecount" onClick={this.singleCount}>Single Count</button>
+      <button type="button" id="doublecount"onClick={this.doubleCount}>Double Count</button>
       </div>
       </div>
     )
   }
 }
+
+
 
 export default Counter;
